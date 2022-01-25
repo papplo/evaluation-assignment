@@ -1,5 +1,5 @@
 const { expect } = require('@jest/globals')
-const transformation = require('./index')
+const transformation = require('./text')
 
 test('Transform strings, "ffdttttyy" should return "ffdtttyy"', () => {
     expect(transformation('ffdttttyy')).toBe('ffdtttyy')
