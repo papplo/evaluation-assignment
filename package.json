@@ -1,9 +1,18 @@
 {
+  "source": "src/index.html",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel",
+    "build": "parcel build"
   },
-
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
-    "jest": "^27.4.7"
+    "jest": "^27.4.7",
+    "parcel": "^2.2.1"
+  },
+  "dependencies": {
+    "@picocss/pico": "^1.4.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
