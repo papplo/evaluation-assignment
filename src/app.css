@@ -2,23 +2,101 @@
     --font-size: 0.9rem;
 }
 
+html {
+    background-color: #D2E8FB;
+}
+
 body {
     height: 100vh;
-    background-color: #D2E8FB;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 main.container {
     justify-content:flex-end;
-    max-width: 576px;
+    width: 95vw;
     margin: 0 auto;
 }
+
+@media (min-width: 375px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit,minmax(0%,1fr));
+  } 
+}
+
+
+@media (min-width: 576px) {
+    main.container {
+      width: 576px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  @media (min-width: 768px) {
+    main.container {
+      width: 576px;
+    }
+  }
+
+
 
 .credit-card-form {
     border-radius: .5em;
     box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     padding: 1.5em;
+    margin-top: 8rem;
 }
+
+.composition-credit-card {
+    color: #D2E8FB;
+    background-color: #1D1737;
+    box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.4);
+
+    font-size: .75rem;
+    letter-spacing: .5px;
+    font-weight: bold;
+    margin: -7.5rem 1.5rem 2.5rem 1.5rem;
+    aspect-ratio: 1.67;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    padding: 2rem;
+}
+.composition-emblem {
+  background-color: #9e9fa0;
+  border-radius: .75rem;
+  aspect-ratio: 3/2;
+  width: 75px;
+}
+
+.composition-card-number {
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.composition-details {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+  .composition-details div {
+    flex-basis: 50%;
+    text-align: left;
+  }
+
+  .composition-details h5 {
+    margin-bottom: 0;
+    color: #D2E8FB;
+  }
+  .composition-details .details-card-expiration-date {
+    text-align: right;
+  }
+
 
 label {
     font-weight: bold;
