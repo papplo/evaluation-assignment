@@ -1,10 +1,12 @@
-const { expect } = require('@jest/globals')
+const { expect, describe, it} = require('@jest/globals')
 const transformation = require('./text')
 
-test('Transform strings, "ffdttttyy" should return "ffdtttyy"', () => {
-    expect(transformation('ffdttttyy')).toBe('ffdtttyy')
-})
-
-test('Transform strings, "iiikigggg" should return "iiikiggg"', () => {
-    expect(transformation('iiikigggg')).toBe('iiikiggg')
+describe('Text transform', () => {
+    it('Transform strings, "ffdttttyy" should return "ffdtttyy"', () => {
+        expect(transformation('ffdttttyy')).toBe('ffdtttyy')
+    })
+    
+    it('Transform strings, "iiikigggg" should return "iiikiggg"', () => {
+        expect(transformation('iiikigggg')).toBe('iiikiggg')
+    })
 })

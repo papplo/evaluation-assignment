@@ -15,6 +15,11 @@ const highestOddsum = (arrayOfNumbers) => {
             : highestEvenNumber = getHighestValue(number, highestEvenNumber)
 
         result = highestOddNumber + highestEvenNumber
+
+        if (index === arrayOfNumbers.length -1) {
+            // break out of loop if no result found
+            break;
+        }
     }
 
     //finally return result
