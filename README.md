@@ -1,5 +1,12 @@
 # Frontend evaluation assignment
 
+## Getting started
+install dependencies with Yarn or NPM using your command line. You should have node installed on your machine.
+
+run command ```yarn start``` to display app on http://localhost:1234
+
+run command ```yarn test``` to show unit tests result
+
 ### Algorithms
 _Text_
 The first algorithm works with string.prototype.replaceAll functionality to iterate over matches returned by a regexp with a global flag. 
@@ -17,3 +24,5 @@ I chose to start by sorting the incoming array in descending order. The array is
 The complexity for the sorting algorithm is logarithmic, so more data means logarithmically increasing time for larger datasets. O(n log n).
 
 In worst case, the looping part would encounter 99% even or odd numbers, so complexity would add upp with `+n`.
+
+_Component_
