@@ -2,13 +2,16 @@
   "source": "src/index.html",
   "scripts": {
     "test": "jest",
-    "start": "parcel",
+    "test:cypress": "yarn run start & cypress run",
+    "open:cypress": "yarn run start & cypress open",
+    "start": "parcel --port 1234",
     "build": "parcel build"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
     "jest": "^27.4.7",
-    "parcel": "^2.2.1"
+    "parcel": "^2.2.1",
+    "cypress": "^9.3.1"
   },
   "dependencies": {
     "@picocss/pico": "^1.4.4",
