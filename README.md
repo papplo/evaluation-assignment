@@ -7,6 +7,11 @@ run command ```yarn start``` to display app on http://localhost:1234
 
 run command ```yarn test``` to show unit tests result
 
+run command ```yarn test:cypress``` to show resuts for e2e-test
+
+run command ```yarn open:cypress``` for a joyful ride along in e2e-tests 
+
+
 navigate to deployed app on [evaluation-assignment.vercel.app](https://evaluation-assignment.vercel.app)
 
 ### Algorithms
