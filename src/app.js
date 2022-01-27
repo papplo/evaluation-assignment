@@ -15,7 +15,7 @@ export function App() {
         holder: undefined,
         month: undefined,
         year: undefined,
-        cvc: undefined
+        cvc: undefined,
     })
 
     function sanitizeStringToDigits(string) {
@@ -53,7 +53,9 @@ export function App() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        console.log('thanks for submitting')
+        console.log(`Thanks ${cardHolder} \n Submitting: ${cardNumber} (${cardCVC}) \n Expires: ${selectedMonth} / ${selectedYear}`)
+        // const url= new URL('http://localhost:1234')
+        window.location.search = '?submitted=true'
     }
 
     return (
@@ -122,13 +124,13 @@ export function App() {
                         </fieldset>
                         <fieldset>
                             <label htmlFor="frmCCCVC">CVC</label>
-                            <input name="cvc" id="frmCCCVC" required inputtype="numeric" maxLength="3" placeholder="* * *" value={cardCVC} onChange={(event) => setCardCVC(event.target.value)} />
+                            <input name="cvc" id="frmCCCVC" inputtype="numeric" maxLength="3" placeholder="* * *" value={cardCVC} onChange={(event) => setCardCVC(event.target.value)} />
                         </fieldset>
                     </div>
 
                     <fieldset>
                         <label htmlFor="terms">
-                            <input type="checkbox" role="switch" id="terms" name="terms" required/>
+                            <input type="checkbox" role="switch" id="terms" name="terms" />
                             I agree to the <a href="#">Privacy Policy</a>
                         </label>
                     </fieldset>
